@@ -7,8 +7,9 @@
     <%= f.text_field :location, class: "form-control" %>
     <%= f.label :category, 'Categoria', class: "control-label" %>
     <%= f.text_field :category, class: "form-control" %>
-    <%= f.label :company, 'Empresa', class: "control-label" %>
-    <%= f.text_field :company, class: "form-control" %>
+    <%= f.label :company_id, 'Empresa', class: "control-label" %>
+    <%= f.collection_select(:company_id, @companies, :id, :name, 
+        { include_blank: "Selecione empresa"}, { class: "form-control" }) %>
     <%= f.label :description, 'Descrição', class: "control-label" %>
     <%= f.text_field :description, class: "form-control" %>
     <strong><%= f.label :featured, 'Destaque', class: "control-label" %></strong>
