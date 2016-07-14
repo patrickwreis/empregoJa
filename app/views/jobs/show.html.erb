@@ -1,6 +1,9 @@
 <section>
   <div>
     <h1><%= @job.title %></h1>
+    <% if @job.featured %>
+    <strong>Destaque</strong>
+    <% end %>
   </div>
     <dl>
       <dd>Categoria</dd>
