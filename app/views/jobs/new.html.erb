@@ -1,0 +1,16 @@
+
+<section>
+  <%= form_for @job do |f| %>
+    <%= f.label :title, 'Título', class: "control-label" %>
+    <%= f.text_field :title, class: "form-control" %>
+    <%= f.label :location, 'Local', class: "control-label" %>
+    <%= f.text_field :location, class: "form-control" %>
+    <%= f.label :category, 'Categoria', class: "control-label" %>
+    <%= f.text_field :category, class: "form-control" %>
+    <%= f.label :company, 'Empresa', class: "control-label" %>
+    <%= f.text_field :company, class: "form-control" %>
+    <%= f.label :description, 'Descrição', class: "control-label" %>
+    <%= f.text_field :description, class: "form-control" %>
+    <%= f.submit "Criar Vaga", class: "btn btn-primary" %>
+  <% end %>
+</section>
