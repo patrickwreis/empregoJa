@@ -1,9 +1,10 @@
 <% @jobs.each do |job| %>
   <div>
-    <h1><%= job.title %></h1>
+    <h1> <%= link_to job.title, job, class: "btn btn-primary" %></h1>
   </div>
   <div>
     <%= job.company %>
     <%= job.location %>
   </div>
+  <!-- <span> <%= link_to "Ver detalhes...", job, class: "btn btn-primary" %> </span> -->
 <% end %>
