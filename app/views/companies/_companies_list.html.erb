@@ -1,0 +1,8 @@
+<div>
+    <h1 class="text-center">Empresas</h1>
+    <div class="list-group">
+        <% companies.each do |company| %>
+        <div class="list-group-item"><%= link_to company.name, company%></div>
+        <% end %>
+    </div>
+</div>

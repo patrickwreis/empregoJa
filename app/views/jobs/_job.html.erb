@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h1><%= link_to job.title, job %></h1>
+    </div>
+    <div class="panel-body">
+        <% if job.featured? %>
+          <strong>Destaque</strong>
+        <% end %>
+        <dl>
+            <dt>Empresa</dt>
+            <dd><%= job.company.name%></dd>
+            <dt>Categoria</dt>
+            <dd><%= job.category.name%></dd>
+            <dt>Local</dt>
+            <dd><%= job.location%></dd>
+        </dl>
+    </div>
+</div>

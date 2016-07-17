@@ -1,28 +1,22 @@
-<section class="jobs">
-  <% @jobs.each do |job| %>
-    <div>
-      <h1> <%= link_to job.title, job %></h1>
-      <% if job.featured %>
-        <span><strong>Destaque</strong></span>
-      <% end %>
+<div class="row">
+    <div class="col-md-9">
+        <section class="jobs">
+            <div class="row">
+                <% @jobs.each do |job| %>
+                <div class="col-md-6">
+                    <%= render job %>
+                </div>
+                <% end %>
+            </div>
+        </section>
     </div>
-    <div>
-      <%= job.company.name %>
-      <%= job.location %>
+
+    <div class="col-md-3">
+        <aside class="companies">
+            <%= render partial: 'companies/companies_list', locals: {companies: @companies} %>
+        </aside>
+        <aside class="categories">
+            <%= render partial: 'categories/categories_list', locals: {categories: @categories} %>
+        </aside>
     </div>
-  <% end %>
-</section>
-<aside class="empresas">
-    <h1>Empresas</h1>
-    <% @companies.each do |company|%>
-      <%= link_to company.name, company, class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</aside>
-<aside class="categorias">
-    <h1>Categorias</h1>
-    <% @categories.each do |category|%>
-      <%= link_to category.name, category, class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</aside>
+</div>

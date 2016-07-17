@@ -1,34 +1,5 @@
-
 <section>
-  <%= form_for @job do |f| %>
     <div class="">
-      <%= f.label :title, 'Título', class: "control-label" %>
-      <%= f.text_field :title, class: "form-control" %>
+        <%= render partial: 'form', locals: {submit_text: 'Criar Vaga'}%>
     </div>
-    <div class="">
-      <%= f.label :location, 'Local', class: "control-label" %>
-      <%= f.text_field :location, class: "form-control" %>
-    </div>
-    <div class="">
-      <%= f.label :category_id, 'Categoria', class: "control-label" %>
-      <%= f.collection_select(:category_id, @categories, :id, :name,
-          { include_blank: "Selecione empresa"}, { class: "form-control" }) %>
-    </div>
-    <div class="">
-      <%= f.label :company_id, 'Empresa', class: "control-label" %>
-      <%= f.collection_select(:company_id, @companies, :id, :name,
-          { include_blank: "Selecione empresa"}, { class: "form-control" }) %>
-    </div>
-    <div class="">
-      <%= f.label :description, 'Descrição', class: "control-label" %>
-      <%= f.text_field :description, class: "form-control" %>
-    </div>
-    <div class="">
-      <strong><%= f.label :featured, 'Destaque', class: "control-label" %></strong>
-      <%= f.check_box :featured %>
-    </div>
-    <div class="">
-      <%= f.submit "Criar Vaga", class: "btn btn-primary" %>
-    </div>
-  <% end %>
 </section>

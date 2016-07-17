@@ -1,21 +1,22 @@
 <section>
-  <div>
-    <h1><%= @job.title %></h1>
-    <% if @job.featured %>
-    <strong>Destaque</strong>
-    <% end %>
-  </div>
-    <dl>
-      <dd>Categoria</dd>
-        <dt><%= @job.category.name %></dt>
-      <dd>Empresa</dd>
-        <dt><%= @job.company.name %></dt>
-      <dd>Descrição</dd>
-        <dt><%= @job.description %></dt>
-      <dd>Local</dd>
-        <dt><%= @job.location %></dt>
-    </dl>
     <div>
-      <%= link_to "Voltar", root_path, class: "btn btn-primary" %>
+        <h1><%= @job.title %></h1>
+        <div class="destaque">
+            <strong>Destaque</strong>
+        </div>
+        <hr>
+        <dl class="dl-horizontal">
+            <dt>Categoria</dt>
+            <dd><%= @job.category.name %></dd>
+            <dt>Descrição</dt>
+            <dd><%= @job.description %></dd>
+            <dt>Empresa</dt>
+            <dd><%= @job.company.name %></dd>
+            <dt>Local</dt>
+            <dd><%= @job.location %></dd>
+        </dl>
     </div>
-  </section>
+</section>
+
+<%= link_to 'Editar Vaga', edit_job_path, class: "btn btn-primary" %>
+<%= link_to 'Voltar', root_path, class: "btn btn-default" %>

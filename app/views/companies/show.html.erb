@@ -1,38 +1,26 @@
 <section>
-  <div class="companies">
-    <h1><%= @company.name %></h1>
-    <div class="list">
-      <dl>
-        <dt>Local</dt>
-          <dd><%= @company.location %></dd>
-        <dt>Email</dt>
-          <dd><%= @company.mail %></dd>
-        <dt>Telefone</dt>
-          <dd><%= @company.phone %></dd>
-      </dl>
+    <div>
+        <div class="row">
+            <div class="col-md-3">
+                <h1><%= @company.name %></h1>
+            </div>
+            <div class="col-md-9">
+                <% if @company.premium? %>
+                <%= image_tag 'estrela', alt: 'empresa premium', id: 'EmpresaPremium' %>
+                <% end %>
+            </div>
+        </div>
+        <dl>
+            <dt>Local</dt>
+            <dd><%= @company.location %></dd>
+            <dt>Email</dt>
+            <dd><%= @company.mail %></dd>
+            <dt>Telefone</dt>
+            <dd><%= @company.phone %></dd>
+        </dl>
     </div>
-  </div>
-  <hr>
-</section>
-
-<section>
-  <div class="jobs">
-    <% @jobs.each do |job| %>
-      <div>
-        <h1> <%= link_to job.title, job %></h1>
-        <% if job.featured %>
-          <span><strong>Destaque</strong></span>
-        <% end %>
-      </div>
-      <div>
-        <%= job.company.name %>
-      </div>
-      <div>
-        <%= job.location %>
-      </div>
-      <div>
-        <%= job.category.name %>
-      </div>
-    <% end %>
-  </div>
+    <hr>
+    <div>
+        <%= render @jobs%>
+    </div>
 </section>

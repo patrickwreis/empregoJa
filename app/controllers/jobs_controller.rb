@@ -1,43 +1,49 @@
 class JobsController < ApplicationController
+  before_action :find_job, only: [:show, :edit, :update]
+  before_action :set_collections, only: [:new, :edit]
 
   def show
-    @job = Job.find(params[:id])
   end
 
   def new
     @job = Job.new
-    @companies = Company.all
-    @categories = Category.all
   end
 
   def create
-    @job = Job.new(params.require(:job).permit(:title, :location, :category_id, :company_id, :description, :featured))
+    @job = Job.new(job_params)
     if @job.save
       redirect_to @job
     else
-      @companies = Company.all
-      @categories = Category.all
-      flash.now[:notice] = "Não foi possível criar a vaga"
+      flash.now[:notice] = 'Não foi possível criar a vaga'
+      set_collections
       render :new
     end
   end
 
   def edit
-    @job = Job.find(params[:id])
-    @companies = Company.all
-    @categories = Category.all
   end
 
   def update
-    @job = Job.find(params[:id])
-    if @job.update(params.require(:job).permit(:title, :location, :category_id, :company_id, :description, :featured))
+     if @job.update(job_params)
       redirect_to @job
     else
-      flash.now[:notice] = "Não foi possível atualizar a vaga"
-      @companies = Company.all
-      @categories = Category.all
+      flash.now[:notice] = 'Não foi possível atualizar a vaga'
+      set_collections
       render :edit
     end
   end
 
+  private
+  def job_params
+    params.require(:job).permit(:title, :company_id, :description, :location, :category_id, :featured)
+  end
+
+  def set_collections
+    @companies = Company.all
+    @categories = Category.all
+  end
+
+  def find_job
+    @job = Job.find(params[:id])
+  end
 end

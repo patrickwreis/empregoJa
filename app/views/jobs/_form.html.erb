@@ -1,0 +1,31 @@
+<%= form_for @job do |f| %>
+  <div class="form-group">
+      <%= f.label :title, 'Título' %>
+      <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+      <%= f.label :company_id, 'Empresa' %>
+      <%= f.collection_select :company_id, @companies, :id, :name, {}, class: "form-control" %>
+  </div>
+  <div class="form-group">
+      <%= f.label :location, 'Local' %>
+      <%= f.text_field :location, class: "form-control" %>
+  </div>
+  <div class="form-group">
+      <%= f.label :category_id, 'Categoria' %>
+      <%= f.collection_select :category_id, @categories, :id, :name, {}, class: "form-control" %>
+  </div>
+  <div class="form-group">
+      <%= f.label :description, 'Descrição' %>
+      <%= f.text_field :description, class: "form-control" %>
+  </div>
+  <div class="checkbox">
+      <label>
+          <%= f.check_box :featured %>
+          <%= f.label :featured, 'Destaque' %>
+      </label>
+  </div>
+  <div>
+      <%= f.submit submit_text, class: "btn btn-default" %>
+  </div>
+<% end %>
