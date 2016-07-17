@@ -1,12 +1,20 @@
-<% @jobs.each do |job| %>
-  <div>
-    <h1> <%= link_to job.title, job %></h1>
-    <% if job.featured %>
-      <span><strong>Destaque</strong></span>
+<section class="jobs">
+  <% @jobs.each do |job| %>
+    <div>
+      <h1> <%= link_to job.title, job %></h1>
+      <% if job.featured %>
+        <span><strong>Destaque</strong></span>
+      <% end %>
+    </div>
+    <div>
+      <%= job.company.name %>
+      <%= job.location %>
+    </div>
+  <% end %>
+</section>
+<aside class="empresas">
+    <% @companies.each do |company|%>
+      <%= link_to company.name, company, class: "btn btn-primary" %>
     <% end %>
   </div>
-  <div>
-    <%= job.company.name %>
-    <%= job.location %>
-  </div>
-<% end %>
+</aside>

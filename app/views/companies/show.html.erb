@@ -12,4 +12,27 @@
       </dl>
     </div>
   </div>
+  <hr>
+</section>
+
+<section>
+  <div class="jobs">
+    <% @jobs.each do |job| %>
+      <div>
+        <h1> <%= link_to job.title, job %></h1>
+        <% if job.featured %>
+          <span><strong>Destaque</strong></span>
+        <% end %>
+      </div>
+      <div>
+        <%= job.company.name %>
+      </div>
+      <div>
+        <%= job.location %>
+      </div>
+      <div>
+        <%= job.category %>
+      </div>
+    <% end %>
+  </div>
 </section>
