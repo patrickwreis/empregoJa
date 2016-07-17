@@ -1,0 +1,23 @@
+<section>
+  <%= form_for @company do |f| %>
+    <div class="">
+      <%= f.label :name, 'Nome', class: "control-label" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="">
+      <%= f.label :location, 'Local', class: "control-label" %>
+      <%= f.text_field :location, class: "form-control" %>
+    </div>
+    <div class="">
+      <%= f.label :mail, 'Email', class: "control-label" %>
+      <%= f.text_field :mail, class: "form-control" %>
+    </div>
+    <div class="">
+      <%= f.label :phone, 'Telefone', class: "control-label" %>
+      <%= f.text_field :phone, class: "form-control" %>
+    </div>
+    <div class="">
+      <%= f.submit "Criar Empresa", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</section>
