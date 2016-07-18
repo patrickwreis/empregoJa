@@ -1,0 +1,77 @@
+[33mcommit e4dfb9bde7a2e6c5aa09d287196e32beb6f94794[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Sun Jul 17 14:45:22 2016 -0300
+
+    jobs_by_category
+
+[33mcommit c969de90d65353f263e5bb5c8861f59065157d18[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Sun Jul 17 14:24:19 2016 -0300
+
+    usuario cadastra vaga com categoria cadastrada
+
+[33mcommit df7744e6d1e2c4ba674bf932573fcbdc3eb5691b[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Sun Jul 17 13:42:04 2016 -0300
+
+    jobs by company
+
+[33mcommit 8e9c9f51019a3b1cb60dcbb7fe0e3c311b8c1580[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Sun Jul 17 12:54:10 2016 -0300
+
+    edit jobs
+
+[33mcommit 92c260e6b2c21613489944ef1d7de0ef123e2ac0[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Sun Jul 17 11:24:51 2016 -0300
+
+    create companies
+
+[33mcommit 053d323ca76c4515fbd5e9307de569b2db6e22ca[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Sun Jul 17 10:25:03 2016 -0300
+
+    create valid jobs
+
+[33mcommit ac6e2ca1bf5144b9154f41f2a7eba89063587020[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Thu Jul 14 13:48:19 2016 -0300
+
+    user create jobs with companies
+
+[33mcommit 7ff9d94fd6e7d6c1fed8ecd4a4706f518143c581[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Thu Jul 14 13:06:12 2016 -0300
+
+    featured jobs to jobs
+
+[33mcommit 5f1b20036c75e2f62a8c0b6564cd7c7ff8e99868[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Thu Jul 14 12:52:13 2016 -0300
+
+    user create job
+
+[33mcommit 8a887f7548216369b4a18e1927ccdc0bb2012e9f[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Thu Jul 14 11:55:15 2016 -0300
+
+    visitor view job details
+
+[33mcommit 9a5a2a857fa899966ee7891c083f0699483abef3[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Thu Jul 14 11:22:53 2016 -0300
+
+    visitor view jobs
+
+[33mcommit 84f09feee63012a4ba040588389dd01e22ada440[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Thu Jul 14 08:48:32 2016 -0300
+
+    Visitor visits home
+
+[33mcommit 9b968516aa7143e10512633050abf01f29ecfbcd[m
+Author: Patrick Reis <patrickwreis@gmail.com>
+Date:   Thu Jul 14 08:33:58 2016 -0300
+
+    Initial commit
