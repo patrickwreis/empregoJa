@@ -1,11 +1,13 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h1><%= link_to job.title, job %></h1>
+        <h1 class="small"><%= link_to job.title, job %>
+            <% if job.featured? %>
+            <strong>Destaque</strong>
+            <% end %>
+        </h1>
+
     </div>
     <div class="panel-body">
-        <% if job.featured? %>
-          <strong>Destaque</strong>
-        <% end %>
         <dl>
             <dt>Empresa</dt>
             <dd><%= job.company.name%></dd>

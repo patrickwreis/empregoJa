@@ -1,26 +1,31 @@
 <section>
     <div>
         <div class="row">
-            <div class="col-md-3">
-                <h1><%= @company.name %></h1>
-            </div>
-            <div class="col-md-9">
-                <% if @company.premium? %>
-                <%= image_tag 'estrela', alt: 'empresa premium', id: 'EmpresaPremium' %>
-                <% end %>
+            <div class="col-md-12">
+                <h1><%= @company.name %>
+                    <% if @company.premium? %>
+                    <%= image_tag 'estrela', alt: 'empresa premium', id: 'EmpresaPremium' %>
+                    <% end %>
+                </h1>
             </div>
         </div>
-        <dl>
-            <dt>Local</dt>
-            <dd><%= @company.location %></dd>
-            <dt>Email</dt>
-            <dd><%= @company.mail %></dd>
-            <dt>Telefone</dt>
-            <dd><%= @company.phone %></dd>
-        </dl>
+        <div class="row">
+            <div class="col-md-12">
+                <dl>
+                    <dt>Local</dt>
+                    <dd><%= @company.location %></dd>
+                    <dt>Email</dt>
+                    <dd><%= @company.mail %></dd>
+                    <dt>Telefone</dt>
+                    <dd><%= @company.phone %></dd>
+                </dl>
+            </div>
+        </div>
     </div>
     <hr>
-    <div>
-        <%= render @jobs%>
+    <div class="row">
+        <div class="col-md-6">
+            <%= render @jobs %>
+        </div>
     </div>
 </section>

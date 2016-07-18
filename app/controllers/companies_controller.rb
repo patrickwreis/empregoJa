@@ -13,7 +13,13 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.create(params.require(:company).permit(:name, :location, :mail, :phone))
-    redirect_to @company
+    @company = Company.new(params.require(:company).permit(:name, :location, :mail, :phone))
+    if @company.save
+      redirect_to @company
+    else
+      flash.now[:notice] = 'Não foi possível criar empresa'
+      render :new
+    end
   end
+  
 end
