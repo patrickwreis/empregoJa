@@ -21,5 +21,19 @@ class CompaniesController < ApplicationController
       render :new
     end
   end
-  
+
+  def edit
+    @company = Company.find(params[:id])
+  end
+
+  def update
+    @company = Company.find(params[:id])
+    if @company.update(params.require(:company).permit(:name, :location, :mail, :phone))
+      redirect_to @company
+    else
+      flash.now[:notice] = 'Não foi possivel atualizar a empresa'
+      render :edit
+    end
+  end
+
 end
